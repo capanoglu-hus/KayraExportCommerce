@@ -1,32 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{948770C2-93C4-4842-B9BA-16DD2C6BC93C}|LogService\\LogService.csproj|c:\\users\\husniye\\desktop\\kayraexportcommerce\\logservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{948770C2-93C4-4842-B9BA-16DD2C6BC93C}|LogService\\LogService.csproj|solutionrelative:logservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F7AE27C-674C-4270-A5CD-0230697A2413}|AuthApi\\AuthApi.csproj|c:\\users\\husniye\\desktop\\kayraexportcommerce\\authapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7F7AE27C-674C-4270-A5CD-0230697A2413}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{948770C2-93C4-4842-B9BA-16DD2C6BC93C}|LogService\\LogService.csproj|c:\\users\\husniye\\desktop\\kayraexportcommerce\\logservice\\workers\\logworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{948770C2-93C4-4842-B9BA-16DD2C6BC93C}|LogService\\LogService.csproj|solutionrelative:logservice\\workers\\logworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{948770C2-93C4-4842-B9BA-16DD2C6BC93C}|LogService\\LogService.csproj|c:\\users\\husniye\\desktop\\kayraexportcommerce\\logservice\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{948770C2-93C4-4842-B9BA-16DD2C6BC93C}|LogService\\LogService.csproj|solutionrelative:logservice\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{948770C2-93C4-4842-B9BA-16DD2C6BC93C}|LogService\\LogService.csproj|c:\\users\\husniye\\desktop\\kayraexportcommerce\\logservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{948770C2-93C4-4842-B9BA-16DD2C6BC93C}|LogService\\LogService.csproj|solutionrelative:logservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{948770C2-93C4-4842-B9BA-16DD2C6BC93C}|LogService\\LogService.csproj|c:\\users\\husniye\\desktop\\kayraexportcommerce\\logservice\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{948770C2-93C4-4842-B9BA-16DD2C6BC93C}|LogService\\LogService.csproj|solutionrelative:logservice\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,84 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\AuthApi\\appsettings.json",
-              "RelativeDocumentMoniker": "AuthApi\\appsettings.json",
-              "ToolTip": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\AuthApi\\appsettings.json",
-              "RelativeToolTip": "AuthApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAACBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-16T08:46:03.051Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\LogService\\appsettings.json",
-              "RelativeDocumentMoniker": "LogService\\appsettings.json",
-              "ToolTip": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\LogService\\appsettings.json",
-              "RelativeToolTip": "LogService\\appsettings.json",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAABAAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-16T08:45:49.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LogWorker.cs",
-              "DocumentMoniker": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\LogService\\Workers\\LogWorker.cs",
-              "RelativeDocumentMoniker": "LogService\\Workers\\LogWorker.cs",
-              "ToolTip": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\LogService\\Workers\\LogWorker.cs",
-              "RelativeToolTip": "LogService\\Workers\\LogWorker.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T08:45:21.917Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\LogService\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "LogService\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\LogService\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "LogService\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T08:45:09.035Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\LogService\\Program.cs",
-              "RelativeDocumentMoniker": "LogService\\Program.cs",
-              "ToolTip": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\LogService\\Program.cs",
-              "RelativeToolTip": "LogService\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T08:44:55.08Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\LogService\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "LogService\\WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\LogService\\WeatherForecast.cs",
-              "RelativeToolTip": "LogService\\WeatherForecast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T08:44:53.124Z"
             }
           ]
         }
