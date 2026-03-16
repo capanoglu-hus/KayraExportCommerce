@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/AuthService/">
+    <Project Path="AuthApi/AuthApi.csproj" Id="7f7ae27c-674c-4270-a5cd-0230697a2413" />
+  </Folder>
+  <Folder Name="/LogService/">
+    <Project Path="LogService/LogService.csproj" Id="948770c2-93c4-4842-b9ba-16dd2c6bc93c" />
+  </Folder>
+  <Folder Name="/ProductService/" />
+  <Folder Name="/ProductService/Core/">
+    <Project Path="ProductionService/Core/ProductionService.Application/ProductionService.Application.csproj" />
+    <Project Path="ProductService/Core/ProductService.Domain/ProductService.Domain.csproj" />
+  </Folder>
+  <Folder Name="/ProductService/Infrastructure/">
+    <Project Path="ProductService/Infrastructure/ProductService.Persistence/ProductService.Persistence.csproj" />
+  </Folder>
+  <Folder Name="/ProductService/Presentation/">
+    <Project Path="ProductionService/Presentation/ProductionService.WebApi/ProductionService.WebApi.csproj" />
+  </Folder>
+</Solution>

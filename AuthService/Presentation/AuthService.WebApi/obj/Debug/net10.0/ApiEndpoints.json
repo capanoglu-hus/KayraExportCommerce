@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "AuthService.WebApi.Controllers.RegisterController",
+    "Method": "CreateUserRegister",
+    "RelativePath": "api/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "AuthService.Application.CQRSDesign.Commands.CreateUserRegisterCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthService.WebApi.Controllers.RegisterController",
+    "Method": "GenerateToken",
+    "RelativePath": "api/Register/generateToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "token",
+        "Type": "AuthService.Application.Dtos.TokenClaimsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
