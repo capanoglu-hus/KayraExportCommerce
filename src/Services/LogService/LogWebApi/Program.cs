@@ -1,10 +1,16 @@
 using LogService.Workers;
 using Serilog;
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var redisConnectionString = builder.Configuration.GetConnectionString("Redis");
 
+// 2. IConnectionMultiplexer'ý Singleton olarak kaydet
+// ConnectionMultiplexer.Connect() metodu aðýr bir iþlemdir, bu yüzden Singleton olmalý.
+builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
+    ConnectionMultiplexer.Connect(redisConnectionString));
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();

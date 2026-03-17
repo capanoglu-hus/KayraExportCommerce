@@ -5,6 +5,7 @@ namespace ProductionService.Application.CQRSDesignPattern.Queries
 {
     public class GetProductByIdQuery: IRequest<GetProductByIdQueryResult>
     {
+
         public GetProductByIdQuery(int productId)
         {
             ProductId = productId;

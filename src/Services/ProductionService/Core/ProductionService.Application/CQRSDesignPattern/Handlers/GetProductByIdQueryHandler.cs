@@ -1,7 +1,8 @@
 ﻿using MediatR;
 using ProductionService.Application.CQRSDesignPattern.Queries;
 using ProductionService.Application.CQRSDesignPattern.Results;
-using ProductService.Persistence.Context;
+using ProductionService.Persistence;
+using ProductionService.Persistence.Context;
 
 namespace ProductionService.Application.CQRSDesignPattern.Handlers
 {
@@ -13,16 +14,27 @@ namespace ProductionService.Application.CQRSDesignPattern.Handlers
 
          */
         private readonly ProductionServiceContext _context;
+        private readonly ICacheService _cacheService;
 
-        public GetProductByIdQueryHandler(ProductionServiceContext context)
+        public GetProductByIdQueryHandler(ProductionServiceContext context, ICacheService cacheService)
         {
             _context = context;
+            _cacheService = cacheService;
         }
 
         public async Task<GetProductByIdQueryResult> Handle(GetProductByIdQuery query, CancellationToken cancellationToken)
         {
+            string cacheKey = $"product_{query.ProductId}";
+            var cachedProduct = await _cacheService.GetAsync<GetProductByIdQueryResult>(cacheKey);
+            if (cachedProduct != null) return cachedProduct;
+
             var value = await _context.Products.FindAsync(query.ProductId);
-            /*veritabanında productId sayesinde productı buluyor*/
+
+            if (value != null)
+            {
+               await _cacheService.SetAsync(cacheKey, value, TimeSpan.FromMinutes(30));
+            }
+
             return new GetProductByIdQueryResult
             {
                 ProductId = value.ProductId,

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace ProductService.Persistence.Migrations
+namespace ProductionService.Persistence.Migrations
 {
     /// <inheritdoc />
     public partial class mig1 : Migration

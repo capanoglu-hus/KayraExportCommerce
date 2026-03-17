@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LogWebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+487034d7693b086c31fad9d3e230dc7ff3439d82")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dbe3f2fbe00bc5b62ffcf9069ae62ceda281e73d")]
 [assembly: System.Reflection.AssemblyProductAttribute("LogWebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LogWebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -16,7 +16,8 @@
           "Serilog.Sinks.Debug": "3.0.0",
           "Serilog.Sinks.File": "7.0.0",
           "Serilog.Sinks.MSSqlServer": "9.0.3",
-          "Serilog.Sinks.Seq": "9.0.0"
+          "Serilog.Sinks.Seq": "9.0.0",
+          "StackExchange.Redis": "2.12.1"
         },
         "runtime": {
           "LogWebApi.dll": {}
@@ -278,6 +279,14 @@
           }
         }
       },
+      "Pipelines.Sockets.Unofficial/2.2.8": {
+        "runtime": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "2.2.8.1080"
+          }
+        }
+      },
       "Serilog/4.3.1": {
         "runtime": {
           "lib/net10.0/Serilog.dll": {
@@ -418,6 +427,18 @@
           }
         }
       },
+      "StackExchange.Redis/2.12.1": {
+        "dependencies": {
+          "Pipelines.Sockets.Unofficial": "2.2.8",
+          "System.IO.Hashing": "10.0.2"
+        },
+        "runtime": {
+          "lib/net10.0/StackExchange.Redis.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.12.1.28395"
+          }
+        }
+      },
       "System.ClientModel/1.5.1": {
         "dependencies": {
           "System.Memory.Data": "8.0.1"
@@ -449,6 +470,14 @@
           "lib/net8.0/System.IdentityModel.Tokens.Jwt.dll": {
             "assemblyVersion": "7.7.1.0",
             "fileVersion": "7.7.1.50719"
+          }
+        }
+      },
+      "System.IO.Hashing/10.0.2": {
+        "runtime": {
+          "lib/net10.0/System.IO.Hashing.dll": {
+            "assemblyVersion": "10.0.0.2",
+            "fileVersion": "10.0.225.61305"
           }
         }
       },
@@ -602,6 +631,13 @@
       "path": "microsoft.sqlserver.server/1.0.0",
       "hashPath": "microsoft.sqlserver.server.1.0.0.nupkg.sha512"
     },
+    "Pipelines.Sockets.Unofficial/2.2.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zG2FApP5zxSx6OcdJQLbZDk2AVlN2BNQD6MorwIfV6gVj0RRxWPEp2LXAxqDGZqeNV1Zp0BNPcNaey/GXmTdvQ==",
+      "path": "pipelines.sockets.unofficial/2.2.8",
+      "hashPath": "pipelines.sockets.unofficial.2.2.8.nupkg.sha512"
+    },
     "Serilog/4.3.1": {
       "type": "package",
       "serviceable": true,
@@ -686,6 +722,13 @@
       "path": "serilog.sinks.seq/9.0.0",
       "hashPath": "serilog.sinks.seq.9.0.0.nupkg.sha512"
     },
+    "StackExchange.Redis/2.12.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IHxJWFM3b4g2Jrp0y7W8r27ODW6v+9oW5voJA4UNNxy0Dshn/lKqAL08kbfDKlRgB3gZFGmUX/u/mHq+mVfvwQ==",
+      "path": "stackexchange.redis/2.12.1",
+      "hashPath": "stackexchange.redis.2.12.1.nupkg.sha512"
+    },
     "System.ClientModel/1.5.1": {
       "type": "package",
       "serviceable": true,
@@ -706,6 +749,13 @@
       "sha512": "sha512-rQkO1YbAjLwnDJSMpRhRtrc6XwIcEOcUvoEcge+evurpzSZM3UNK+MZfD3sKyTlYsvknZ6eJjSBfnmXqwOsT9Q==",
       "path": "system.identitymodel.tokens.jwt/7.7.1",
       "hashPath": "system.identitymodel.tokens.jwt.7.7.1.nupkg.sha512"
+    },
+    "System.IO.Hashing/10.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AKJknIFi9O3+rGExxTry188JPvUoZAPcCtS2qdqyFhIzsxQ1Ap94BeGDG0VzVEHakhmRxmJtVih6TsHoghIt/g==",
+      "path": "system.io.hashing/10.0.2",
+      "hashPath": "system.io.hashing.10.0.2.nupkg.sha512"
     },
     "System.Memory.Data/8.0.1": {
       "type": "package",

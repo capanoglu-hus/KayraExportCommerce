@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ProductService.Persistence.Context;
+using ProductionService.Persistence.Context;
 
 #nullable disable
 
-namespace ProductService.Persistence.Migrations
+namespace ProductionService.Persistence.Migrations
 {
     [DbContext(typeof(ProductionServiceContext))]
     [Migration("20260313204053_mig1")]

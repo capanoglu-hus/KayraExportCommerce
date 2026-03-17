@@ -1,8 +1,10 @@
 ﻿using AuthApi.Dtos;
 using AuthApi.Models;
+using AuthApi.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace AuthApi.Controllers
 {
@@ -12,11 +14,14 @@ namespace AuthApi.Controllers
     {
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly UserManager<User> _userManager;
+        private readonly IRedisService _redisService;
 
-        public RoleController(RoleManager<IdentityRole> roleManager, UserManager<User> userManager)
+
+        public RoleController(IRedisService redisService, RoleManager<IdentityRole> roleManager, UserManager<User> userManager)
         {
             _roleManager = roleManager;
             _userManager = userManager;
+            _redisService = redisService;
         }
 
         [HttpPost("create")]
@@ -33,6 +38,8 @@ namespace AuthApi.Controllers
             {
                 return BadRequest(result.Errors);
             }
+            
+            
             return Ok($"''{role.RoleName} eklendi");
         }
 
@@ -50,6 +57,8 @@ namespace AuthApi.Controllers
             {
                 return NotFound($" Bu '{dto.RoleName}' ile kullanıcı bulunamadı");
             }
+
+            
 
             return Ok($" '{dto.Email}' sahip kullanıcı '{dto.RoleName}' eklendi");
         }

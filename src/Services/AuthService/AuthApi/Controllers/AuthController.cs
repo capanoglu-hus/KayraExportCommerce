@@ -7,7 +7,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
+using Serilog;
 using System.Linq;
+using static AuthApi.Dtos.LogDataMessage;
 
 namespace AuthApi.Controllers
 {
@@ -18,12 +21,15 @@ namespace AuthApi.Controllers
         private readonly UserManager<User> _userManager;
         private readonly UserDbContext _context;
         private readonly ITokenService _tokenService;
+        
+        private readonly IRedisService _redisService;
 
-        public AuthController(UserManager<User> userManager, UserDbContext context, ITokenService tokenService)
+        public AuthController(IRedisService redisService, UserManager<User> userManager, UserDbContext context, ITokenService tokenService)
         {
             _userManager = userManager;
             _context = context;
             _tokenService = tokenService;
+            _redisService = redisService;
         }
 
         [HttpPost("register")]
@@ -39,8 +45,20 @@ namespace AuthApi.Controllers
             /* yeni kullnaıcı ıdentity ile usermanager ekliyor*/
             if (!result.Succeeded)
             {
+                await _redisService.PublishLogAsync("log_channel", new LogMessage
+                {
+                    ServiceName = "Auth",
+                    Level = LogDataMessage.LogLevel.Critical,
+                    Message = "Kullanıcı oluşturalamadı",
+                });
                 return BadRequest(result.Errors);
             }
+            await _redisService.PublishEventAsync("event_message", new EventMessage
+            {
+                Service = "AuthService/AuthController",
+                Action = "register işlemi yapıldı",
+                Timestamp = DateTime.UtcNow
+            });
             return Ok(new { Message = " Kullanıcı oluşturuldu" });
         }
 
@@ -54,6 +72,12 @@ namespace AuthApi.Controllers
             if(user == null || !await _userManager.CheckPasswordAsync(user, login.Password))
             {
                 /* kullanıcı olup olmadığına ve pass kontrolu yapıyor*/
+                await _redisService.PublishLogAsync("log_channel", new LogMessage
+                {
+                    ServiceName = "Auth",
+                    Level = (LogDataMessage.LogLevel)2,
+                    Message = "Kullanıcı yanlış giriş",
+                });
                 return Unauthorized(new { Message = "email veya şifre yanlış" });
 
             }
@@ -66,6 +90,12 @@ namespace AuthApi.Controllers
 
             user.RefreshTokens.Add(refreshToken);
             await _userManager.UpdateAsync(user);
+            await _redisService.PublishEventAsync("event_message", new EventMessage
+            {
+                Service = "AuthService/AuthController",
+                Action = "login işlemi yapıldı",
+                Timestamp = DateTime.UtcNow
+            });
             return Ok(new TokenResponseDto { AccessToken = accessToken, RefreshToken = refreshToken.Token });
            
         }
@@ -79,11 +109,23 @@ namespace AuthApi.Controllers
             /* o tokenı kullanan kullanıcıyı buluyor*/
             if(user == null)
             {
+                await _redisService.PublishLogAsync("log_channel", new LogMessage
+                {
+                    ServiceName = "Auth",
+                    Level = LogDataMessage.LogLevel.Critical,
+                    Message = "geçersiz refresh token",
+                });
                 return Unauthorized(new { Message = " geçersiz refresh token" });
             }
             var existingToken = user.RefreshTokens.Single(t => t.Token == refreshToken);
             if (!existingToken.isActive)
             {
+                await _redisService.PublishLogAsync("log_channel", new LogMessage
+                {
+                    ServiceName = "Auth",
+                    Level = LogDataMessage.LogLevel.Critical,
+                    Message = "refresh token aktif değil",
+                });
                 return Unauthorized(new { Message = " refresh token aktif değil" });
             }
             /*refresh tokenı iptal ediyor*/
@@ -112,6 +154,12 @@ namespace AuthApi.Controllers
                 .SingleOrDefaultAsync(u => u.RefreshTokens.Any(t => t.Token == token));
             if (user == null)
             {
+                await _redisService.PublishLogAsync("log_channel", new LogMessage
+                {
+                    ServiceName = "Auth",
+                    Level = LogDataMessage.LogLevel.Critical,
+                    Message = "oturum kapatma için kullanıcı bulunamadı",
+                });
                 return NotFound();
             }
             var existing = user.RefreshTokens.Single(t => t.Token == token);
@@ -122,6 +170,12 @@ namespace AuthApi.Controllers
             existing.Revoked = DateTime.UtcNow;
             existing.RevokedByIp = GetIpAddress();
             await _userManager.UpdateAsync(user);
+            await _redisService.PublishEventAsync("event_message", new EventMessage
+            {
+                Service = "AuthService/AuthController",
+                Action = "revoke işlemi yapıldı",
+                Timestamp = DateTime.UtcNow
+            });
             return Ok(new { Message = "iptal edildi" });
         }
         /*atılan requestten ip adresi alma*/
