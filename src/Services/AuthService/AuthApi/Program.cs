@@ -10,24 +10,33 @@ using StackExchange.Redis;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+// redis için baðlantý yapýsý
 var redisConnectionString = builder.Configuration.GetConnectionString("Redis");
 
-// 2. IConnectionMultiplexer'ý Singleton olarak kaydet
-// ConnectionMultiplexer.Connect() metodu aðýr bir iþlemdir, bu yüzden Singleton olmalý.
+// multiconnect olarak baðlanma redise
 builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
     ConnectionMultiplexer.Connect(redisConnectionString));
 
-// 3. Kendi Cache servisini kaydet
+// servisleri alýyor
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IRoleService, RoleService>();
 builder.Services.AddScoped<IRedisService, RedisService>();
+
+// event için worker
 builder.Services.AddHostedService<EventSubscriber>();
 // Add services to the container.
-builder.Services.AddMemoryCache(); //CACHE iþlemleri
+
+builder.Services.AddMemoryCache(); 
+
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+// veritabaný baðlantýsý
 builder.Services.AddDbContext<UserDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
     );
+
 // register-login kurallarý
 builder.Services.AddIdentity<User, IdentityRole>(options =>
 {

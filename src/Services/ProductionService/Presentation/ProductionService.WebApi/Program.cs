@@ -1,28 +1,54 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 using ProductionService.Application.CQRSDesignPattern.Handlers;
 using ProductionService.Persistence;
 
 using ProductionService.Persistence.Context;
 using StackExchange.Redis;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 /*veritabaný baðlantýsý ekleme*/
 builder.Services.AddDbContext<ProductionServiceContext>();
 // Add services to the container.
 
-// 1. Baðlantý dizesini al (appsettings.json'dan)
+/* redis için baðlantý alýmý*/
 var redisConnectionString = builder.Configuration.GetConnectionString("Redis");
-
-// 2. IConnectionMultiplexer'ý Singleton olarak kaydet
-// ConnectionMultiplexer.Connect() metodu aðýr bir iþlemdir, bu yüzden Singleton olmalý.
+// redis baðlantýsý yapma
 builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
     ConnectionMultiplexer.Connect(redisConnectionString));
 
-// 3. Kendi Cache servisini kaydet
+/* apigateway token gönderimini service içinde kontrol etmek*/
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(option =>
+    {
+        option.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecurityKey"])),
+            ClockSkew = TimeSpan.Zero 
+        };
+    });
+
+// Authorization -> iþlemini için  
+builder.Services.AddAuthorizationBuilder()
+    .AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+
+
+// Cache servisini 
 builder.Services.AddScoped<ICacheService, CacheService>();
+
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetProductQueryHandler).Assembly));
 /* direkt IRequestHandler sýnýfý kaydediyor assembly de */
+
 builder.Services.AddControllers();
+builder.Services.AddAuthorization();
 builder.Services.AddEndpointsApiExplorer();
 /*Swagger yapýsýný kullanmak için */
 builder.Services.AddSwaggerGen(x =>
@@ -44,7 +70,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+app.UseAuthentication();  
+app.UseAuthorization(); 
 
 app.MapControllers();
 

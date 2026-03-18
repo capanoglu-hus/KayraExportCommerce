@@ -1,4 +1,6 @@
-﻿namespace ProductionService.Persistence
+﻿using static ProductionService.Persistence.LogDataMessage;
+
+namespace ProductionService.Persistence
 {
     public interface ICacheService
     {
@@ -7,8 +9,8 @@
         
         Task RemoveAsync(string key);
 
-        Task<(bool Success, T Value)> TryGetValueAsync<T>(string key);
 
         Task PublishEventAsync(string channel, object message);
+        Task PublishLogAsync(string channel, LogMessage message);
     }
 }

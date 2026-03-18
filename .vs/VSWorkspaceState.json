@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\Services",
+    "\\src\\Services\\ApiGateway\\ApiGateway",
+    "\\src\\Services\\ApiGateway\\ApiGateway\\Properties",
+    "\\src\\Services\\ProductionService",
+    "\\src\\Services\\ProductionService\\Presentation",
+    "\\src\\Services\\ProductionService\\Presentation\\ProductionService.WebApi",
+    "\\src\\Services\\ProductionService\\Presentation\\ProductionService.WebApi\\Properties"
+  ],
+  "SelectedNode": "\\src\\Services\\ProductionService\\Presentation\\ProductionService.WebApi\\Program.cs",
+  "PreviewInSolutionExplorer": false
+}

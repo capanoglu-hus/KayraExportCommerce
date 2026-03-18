@@ -2,7 +2,7 @@
 
 namespace ProductionService.Application.CQRSDesignPattern.Commands
 {
-    public class RemoveProductCommand : IRequest
+    public class RemoveProductCommand : IRequest<bool>
     {
         /*getbyıd için yapı */
         public RemoveProductCommand(int productId)

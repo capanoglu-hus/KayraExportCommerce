@@ -2,7 +2,7 @@
 
 namespace ProductionService.Application.CQRSDesignPattern.Commands
 {
-    public class CreateProductCommand:IRequest
+    public class CreateProductCommand: IRequest<bool>
     {
         /*
          * IRequest -> Presentation sınıfında kullanacak isteği buraya attığımı bildirecez

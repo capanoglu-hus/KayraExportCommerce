@@ -1,33 +1,17 @@
 ﻿using StackExchange.Redis;
 using System.Text.Json;
+using static ProductionService.Persistence.LogDataMessage;
 
 namespace ProductionService.Persistence
 {
     public class CacheService : ICacheService
     {
+        /* redis cache işlemleri için veri türleri*/
         private readonly IDatabase _redisDb;
 
         public CacheService(IConnectionMultiplexer redis)
         {
             _redisDb = redis.GetDatabase();
-        }
-
-        public async Task<(bool Success, T Value)> TryGetValueAsync<T>(string key)
-        {
-            try
-            {
-                var result = await _redisDb.StringGetAsync(key);
-                if (result.HasValue)
-                {
-                    var value = JsonSerializer.Deserialize<T>(result.ToString());
-                    return (true, value);
-                }
-            }
-            catch (Exception)
-            {
-                // Redis bağlantı hatası olsa bile false dönerek sistemin çalışmaya devam etmesini sağlarız
-            }
-            return (false, default);
         }
 
         public async Task<T> GetAsync<T>(string key)
@@ -58,7 +42,7 @@ namespace ProductionService.Persistence
             await subscriber.PublishAsync(RedisChannel.Literal(channel), payload);
         }
 
-        public async Task PublishLogAsync(string channel, object message)
+        public async Task PublishLogAsync(string channel, LogMessage message)
         {
             var subscriber = _redisDb.Multiplexer.GetSubscriber();
             var payload = JsonSerializer.Serialize(message);

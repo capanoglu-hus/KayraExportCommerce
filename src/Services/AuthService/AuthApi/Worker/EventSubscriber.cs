@@ -17,6 +17,7 @@ namespace AuthApi.Worker
 
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
         {
+            /* event için redis sub.*/
             var subscriber = _redis.GetSubscriber();
             return subscriber.SubscribeAsync(RedisChannel.Literal("event_message"), (channel, message) =>
             {

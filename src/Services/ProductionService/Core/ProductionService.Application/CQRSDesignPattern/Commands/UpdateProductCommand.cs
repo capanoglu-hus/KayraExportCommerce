@@ -2,7 +2,7 @@
 
 namespace ProductionService.Application.CQRSDesignPattern.Commands
 {
-    public class UpdateProductCommand : IRequest
+    public class UpdateProductCommand : IRequest<bool>
     {
         public int ProductId { get; set; }
         public string Name { get; set; }

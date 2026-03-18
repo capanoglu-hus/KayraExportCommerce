@@ -13,12 +13,12 @@
 
         public class LogMessage
         {
-            public string ServiceName { get; set; } // Hangi servisten geldi? (Auth, Production)
-            public LogLevel Level { get; set; }    // INFO, WARNING, ERROR, CRITICAL
-            public string Message { get; set; }     // Log mesajı
-            public string? Exception { get; set; }  // Varsa hata detayları (StackTrace)
+            public string ServiceName { get; set; } 
+            public LogLevel Level { get; set; }  
+            public string Message { get; set; }    
+            public string? Exception { get; set; }  
             public DateTime Timestamp { get; set; } = DateTime.UtcNow;
-            public object? Payload { get; set; }    // İsteğe bağlı: Gönderilen data (JSON)
+            public object? Payload { get; set; }    
         }
 
         

@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8F40714B-4651-CE8F-678F-605401048DC9}|src\\Services\\LogService\\LogWebApi\\LogWebApi.csproj|c:\\users\\husniye\\desktop\\kayraexportcommerce\\src\\services\\logservice\\logwebapi\\workers\\logworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F40714B-4651-CE8F-678F-605401048DC9}|src\\Services\\LogService\\LogWebApi\\LogWebApi.csproj|solutionrelative:src\\services\\logservice\\logwebapi\\workers\\logworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A39374DE-1B6E-4A99-4CEF-3E69A25846B0}|src\\Services\\AuthService\\AuthApi\\AuthApi.csproj|c:\\users\\husniye\\desktop\\kayraexportcommerce\\src\\services\\authservice\\authapi\\services\\redisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A39374DE-1B6E-4A99-4CEF-3E69A25846B0}|src\\Services\\AuthService\\AuthApi\\AuthApi.csproj|solutionrelative:src\\services\\authservice\\authapi\\services\\redisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A39374DE-1B6E-4A99-4CEF-3E69A25846B0}|src\\Services\\AuthService\\AuthApi\\AuthApi.csproj|c:\\users\\husniye\\desktop\\kayraexportcommerce\\src\\services\\authservice\\authapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A39374DE-1B6E-4A99-4CEF-3E69A25846B0}|src\\Services\\AuthService\\AuthApi\\AuthApi.csproj|solutionrelative:src\\services\\authservice\\authapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A39374DE-1B6E-4A99-4CEF-3E69A25846B0}|src\\Services\\AuthService\\AuthApi\\AuthApi.csproj|c:\\users\\husniye\\desktop\\kayraexportcommerce\\src\\services\\authservice\\authapi\\dtos\\logdatamessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A39374DE-1B6E-4A99-4CEF-3E69A25846B0}|src\\Services\\AuthService\\AuthApi\\AuthApi.csproj|solutionrelative:src\\services\\authservice\\authapi\\dtos\\logdatamessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E05C86DE-83C0-9C55-0668-3F4DA91B3F1A}|src\\Services\\ApiGateway\\ApiGateway\\ApiGateway.csproj|c:\\users\\husniye\\desktop\\kayraexportcommerce\\src\\services\\apigateway\\apigateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E05C86DE-83C0-9C55-0668-3F4DA91B3F1A}|src\\Services\\ApiGateway\\ApiGateway\\ApiGateway.csproj|solutionrelative:src\\services\\apigateway\\apigateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8F40714B-4651-CE8F-678F-605401048DC9}|src\\Services\\LogService\\LogWebApi\\LogWebApi.csproj|c:\\users\\husniye\\desktop\\kayraexportcommerce\\src\\services\\logservice\\logwebapi\\dto\\logdatamessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F40714B-4651-CE8F-678F-605401048DC9}|src\\Services\\LogService\\LogWebApi\\LogWebApi.csproj|solutionrelative:src\\services\\logservice\\logwebapi\\dto\\logdatamessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A39374DE-1B6E-4A99-4CEF-3E69A25846B0}|src\\Services\\AuthService\\AuthApi\\AuthApi.csproj|c:\\users\\husniye\\desktop\\kayraexportcommerce\\src\\services\\authservice\\authapi\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A39374DE-1B6E-4A99-4CEF-3E69A25846B0}|src\\Services\\AuthService\\AuthApi\\AuthApi.csproj|solutionrelative:src\\services\\authservice\\authapi\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E05C86DE-83C0-9C55-0668-3F4DA91B3F1A}|src\\Services\\ApiGateway\\ApiGateway\\ApiGateway.csproj|c:\\users\\husniye\\desktop\\kayraexportcommerce\\src\\services\\apigateway\\apigateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E05C86DE-83C0-9C55-0668-3F4DA91B3F1A}|src\\Services\\ApiGateway\\ApiGateway\\ApiGateway.csproj|solutionrelative:src\\services\\apigateway\\apigateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,76 +30,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LogDataMessage.cs",
-              "DocumentMoniker": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\AuthService\\AuthApi\\Dtos\\LogDataMessage.cs",
-              "RelativeDocumentMoniker": "src\\Services\\AuthService\\AuthApi\\Dtos\\LogDataMessage.cs",
-              "ToolTip": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\AuthService\\AuthApi\\Dtos\\LogDataMessage.cs",
-              "RelativeToolTip": "src\\Services\\AuthService\\AuthApi\\Dtos\\LogDataMessage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T14:31:32.334Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LogDataMessage.cs",
-              "DocumentMoniker": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\LogService\\LogWebApi\\Dto\\LogDataMessage.cs",
-              "RelativeDocumentMoniker": "src\\Services\\LogService\\LogWebApi\\Dto\\LogDataMessage.cs",
-              "ToolTip": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\LogService\\LogWebApi\\Dto\\LogDataMessage.cs",
-              "RelativeToolTip": "src\\Services\\LogService\\LogWebApi\\Dto\\LogDataMessage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T14:24:35.179Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RedisService.cs",
-              "DocumentMoniker": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\AuthService\\AuthApi\\Services\\RedisService.cs",
-              "RelativeDocumentMoniker": "src\\Services\\AuthService\\AuthApi\\Services\\RedisService.cs",
-              "ToolTip": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\AuthService\\AuthApi\\Services\\RedisService.cs",
-              "RelativeToolTip": "src\\Services\\AuthService\\AuthApi\\Services\\RedisService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA+wBkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T14:25:23.69Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LogWorker.cs",
-              "DocumentMoniker": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\LogService\\LogWebApi\\Workers\\LogWorker.cs",
-              "RelativeDocumentMoniker": "src\\Services\\LogService\\LogWebApi\\Workers\\LogWorker.cs",
-              "ToolTip": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\LogService\\LogWebApi\\Workers\\LogWorker.cs",
-              "RelativeToolTip": "src\\Services\\LogService\\LogWebApi\\Workers\\LogWorker.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAqwBcAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T14:23:01.075Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\AuthService\\AuthApi\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "src\\Services\\AuthService\\AuthApi\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\AuthService\\AuthApi\\Controllers\\AuthController.cs",
               "RelativeToolTip": "src\\Services\\AuthService\\AuthApi\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAAAEwAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T14:19:34.352Z"
+              "WhenOpened": "2026-03-18T17:40:20.447Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\AuthService\\AuthApi\\Services\\TokenService.cs",
-              "RelativeDocumentMoniker": "src\\Services\\AuthService\\AuthApi\\Services\\TokenService.cs",
-              "ToolTip": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\AuthService\\AuthApi\\Services\\TokenService.cs",
-              "RelativeToolTip": "src\\Services\\AuthService\\AuthApi\\Services\\TokenService.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAAADYAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\ApiGateway\\ApiGateway\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\ApiGateway\\ApiGateway\\appsettings.json",
+              "ToolTip": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\ApiGateway\\ApiGateway\\appsettings.json",
+              "RelativeToolTip": "src\\Services\\ApiGateway\\ApiGateway\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-18T17:36:57.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\ApiGateway\\ApiGateway\\Program.cs",
+              "RelativeDocumentMoniker": "src\\Services\\ApiGateway\\ApiGateway\\Program.cs",
+              "ToolTip": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\ApiGateway\\ApiGateway\\Program.cs",
+              "RelativeToolTip": "src\\Services\\ApiGateway\\ApiGateway\\Program.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T13:55:37.669Z"
+              "WhenOpened": "2026-03-18T17:34:57.876Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -13,7 +13,7 @@ namespace AuthApi.Services
         {
             _redisDb = redis.GetDatabase();
         }
-
+        /* event için redis  pub.*/
         public async Task PublishEventAsync(string channel, object event_message)
         {
             var subscriber = _redisDb.Multiplexer.GetSubscriber();
@@ -21,7 +21,7 @@ namespace AuthApi.Services
 
             await subscriber.PublishAsync(RedisChannel.Literal(channel), payload);
         }
-
+        /* log için redis  pub.*/
         public async Task PublishLogAsync(string channel, LogMessage Log_message)
         {
             var subscriber = _redisDb.Multiplexer.GetSubscriber();
