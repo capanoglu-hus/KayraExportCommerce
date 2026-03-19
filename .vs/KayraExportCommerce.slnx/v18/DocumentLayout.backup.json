@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A39374DE-1B6E-4A99-4CEF-3E69A25846B0}|src\\Services\\AuthService\\AuthApi\\AuthApi.csproj|c:\\users\\husniye\\desktop\\kayraexportcommerce\\src\\services\\authservice\\authapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A39374DE-1B6E-4A99-4CEF-3E69A25846B0}|src\\Services\\AuthService\\AuthApi\\AuthApi.csproj|solutionrelative:src\\services\\authservice\\authapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E05C86DE-83C0-9C55-0668-3F4DA91B3F1A}|src\\Services\\ApiGateway\\ApiGateway\\ApiGateway.csproj|c:\\users\\husniye\\desktop\\kayraexportcommerce\\src\\services\\apigateway\\apigateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E05C86DE-83C0-9C55-0668-3F4DA91B3F1A}|src\\Services\\ApiGateway\\ApiGateway\\ApiGateway.csproj|solutionrelative:src\\services\\apigateway\\apigateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E05C86DE-83C0-9C55-0668-3F4DA91B3F1A}|src\\Services\\ApiGateway\\ApiGateway\\ApiGateway.csproj|c:\\users\\husniye\\desktop\\kayraexportcommerce\\src\\services\\apigateway\\apigateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E05C86DE-83C0-9C55-0668-3F4DA91B3F1A}|src\\Services\\ApiGateway\\ApiGateway\\ApiGateway.csproj|solutionrelative:src\\services\\apigateway\\apigateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,50 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\AuthService\\AuthApi\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "src\\Services\\AuthService\\AuthApi\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\AuthService\\AuthApi\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "src\\Services\\AuthService\\AuthApi\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T17:40:20.447Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\ApiGateway\\ApiGateway\\appsettings.json",
-              "RelativeDocumentMoniker": "src\\Services\\ApiGateway\\ApiGateway\\appsettings.json",
-              "ToolTip": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\ApiGateway\\ApiGateway\\appsettings.json",
-              "RelativeToolTip": "src\\Services\\ApiGateway\\ApiGateway\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-18T17:36:57.035Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\ApiGateway\\ApiGateway\\Program.cs",
-              "RelativeDocumentMoniker": "src\\Services\\ApiGateway\\ApiGateway\\Program.cs",
-              "ToolTip": "C:\\Users\\husniye\\Desktop\\KayraExportCommerce\\src\\Services\\ApiGateway\\ApiGateway\\Program.cs",
-              "RelativeToolTip": "src\\Services\\ApiGateway\\ApiGateway\\Program.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T17:34:57.876Z",
-              "EditorCaption": ""
             }
           ]
         }

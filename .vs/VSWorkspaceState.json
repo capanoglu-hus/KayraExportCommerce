@@ -1,15 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src",
     "\\src\\Services",
-    "\\src\\Services\\ApiGateway\\ApiGateway",
-    "\\src\\Services\\ApiGateway\\ApiGateway\\Properties",
+    "\\src\\Services\\LogService",
+    "\\src\\Services\\LogService\\LogWebApi",
     "\\src\\Services\\ProductionService",
-    "\\src\\Services\\ProductionService\\Presentation",
-    "\\src\\Services\\ProductionService\\Presentation\\ProductionService.WebApi",
-    "\\src\\Services\\ProductionService\\Presentation\\ProductionService.WebApi\\Properties"
+    "\\src\\Services\\ProductionService\\Presentation"
   ],
-  "SelectedNode": "\\src\\Services\\ProductionService\\Presentation\\ProductionService.WebApi\\Program.cs",
+  "SelectedNode": "\\docker-compose.yml",
   "PreviewInSolutionExplorer": false
 }

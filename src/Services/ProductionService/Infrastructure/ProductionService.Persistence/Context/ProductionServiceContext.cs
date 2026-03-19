@@ -9,11 +9,13 @@ namespace ProductionService.Persistence.Context
 {
     public class ProductionServiceContext:DbContext
     {
-       
-       
+        public ProductionServiceContext(DbContextOptions<ProductionServiceContext> options) : base(options)
+        {
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;initial Catalog=KayraExport;integrated Security=true;Trusted_Connection=True;TrustServerCertificate=true");
+          
         }
         public DbSet<Product> Products { get; set; }
         /* veritabanı bağlantı kurma 

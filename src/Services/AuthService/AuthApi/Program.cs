@@ -24,7 +24,6 @@ builder.Services.AddScoped<IRedisService, RedisService>();
 
 // event için worker
 builder.Services.AddHostedService<EventSubscriber>();
-// Add services to the container.
 
 builder.Services.AddMemoryCache(); 
 
@@ -34,8 +33,13 @@ builder.Services.AddOpenApi();
 
 // veritabaný baðlantýsý
 builder.Services.AddDbContext<UserDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
-    );
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+    sqlOptions => sqlOptions.EnableRetryOnFailure(
+        maxRetryCount: 5, 
+        maxRetryDelay: TimeSpan.FromSeconds(10),
+        errorNumbersToAdd: null))
+
+);
 
 // register-login kurallarý
 builder.Services.AddIdentity<User, IdentityRole>(options =>
@@ -73,7 +77,22 @@ builder.Services.AddAuthentication(option =>
 
 builder.Services.AddScoped<ITokenService, TokenService>();
 var app = builder.Build();
+// sqlserver docker da ilk kurulmasý için
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var context = services.GetRequiredService<UserDbContext>();
 
+        context.Database.Migrate();
+    }
+    catch (Exception ex)
+    {
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "Veritabaný migration sýrasýnda bir hata oluþtu.");
+    }
+}
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

@@ -3,6 +3,10 @@
     "Name": "Yeni Profil",
     "Projects": [
       {
+        "Path": "src\\Services\\ApiGateway\\ApiGateway\\ApiGateway.csproj",
+        "Action": "Start"
+      },
+      {
         "Path": "src\\Services\\AuthService\\AuthApi\\AuthApi.csproj",
         "Action": "Start"
       },
@@ -12,10 +16,6 @@
       },
       {
         "Path": "src\\Services\\ProductionService\\Presentation\\ProductionService.WebApi\\ProductionService.WebApi.csproj",
-        "Action": "Start"
-      },
-      {
-        "Path": "src\\Services\\ApiGateway\\ApiGateway\\ApiGateway.csproj",
         "Action": "Start"
       }
     ]

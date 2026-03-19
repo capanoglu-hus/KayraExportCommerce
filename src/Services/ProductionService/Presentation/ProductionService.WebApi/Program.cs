@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 using ProductionService.Application.CQRSDesignPattern.Handlers;
@@ -9,9 +10,19 @@ using StackExchange.Redis;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
 /*veritabaný baðlantýsý ekleme*/
-builder.Services.AddDbContext<ProductionServiceContext>();
-// Add services to the container.
+builder.Services.AddDbContext<ProductionServiceContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+    sqlOptions => sqlOptions.EnableRetryOnFailure(
+        maxRetryCount: 5,
+        maxRetryDelay: TimeSpan.FromSeconds(10),
+        errorNumbersToAdd: null))
+
+);
+
+
+
 
 /* redis için baðlantý alýmý*/
 var redisConnectionString = builder.Configuration.GetConnectionString("Redis");
@@ -57,6 +68,22 @@ builder.Services.AddSwaggerGen(x =>
 });
 
 var app = builder.Build();
+// eðer sqlserver da daha öce db oluþmamýþsa migrationlarý içeri aktaracak
+ using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var context = services.GetRequiredService<ProductionServiceContext>();
+
+        context.Database.Migrate();
+    }
+    catch (Exception ex)
+    {
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "Veritabaný migration sýrasýnda bir hata oluþtu.");
+    }
+} 
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

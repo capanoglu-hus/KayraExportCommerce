@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("d4342c4e-6ef9-4c46-88b5-a802b1efefbc")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("LogWebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1dae984a345573aa17f7a9cfcad2f1637853ae45")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f5291bc32674be0eaa98f85700b5fb89f19e3c1")]
 [assembly: System.Reflection.AssemblyProductAttribute("LogWebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LogWebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
