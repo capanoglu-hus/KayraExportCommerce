@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\Services",
+    "\\src\\Services\\ApiGateway",
+    "\\src\\Services\\ApiGateway\\ApiGateway",
+    "\\src\\Services\\AuthService\\AuthApi\\Controllers",
+    "\\src\\Services\\AuthService\\AuthApi\\Services",
+    "\\src\\Services\\LogService\\LogWebApi",
+    "\\src\\Services\\ProductionService",
+    "\\src\\Services\\ProductionService\\Presentation"
+  ],
+  "SelectedNode": "\\src\\Services\\ApiGateway\\ApiGateway\\Program.cs",
+  "PreviewInSolutionExplorer": false
+}
