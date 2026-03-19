@@ -1,44 +1,33 @@
-1. Auth Service (Kimlik Doğrulama ve Yetki)
-## Kullanıcı yönetimi, JWT işlemleri ve rol atamaları bu servis üzerinden yürütülür.
+# 1. Auth Service (Kimlik Doğrulama ve Yetki)
+### Kullanıcı yönetimi, JWT işlemleri ve rol atamaları bu servis üzerinden yürütülür.
 
-### [POST] /auth-service/auth/register
-  Yeni bir kullanıcı hesabı oluşturur.
+#### [POST] /auth-service/auth/register
+    Yeni bir kullanıcı hesabı oluşturur.
+    Body (JSON): username, email, password
+    Özellikler: Email formatı ve şifre karmaşıklığı kontrol edilir.
+    Not: Başarılı kayıtta log sistemi bilgilendirilir.
 
-  Body (JSON): username, email, password
+#### [POST] /auth-service/auth/login
+    Sisteme giriş yapar.
+    Body (JSON): email, password
+    Yanıt: accessToken, refreshToken
+    Not: Docker ortamında bu işlem log servisine Event olarak bildirilir.
 
-  Özellikler: Email formatı ve şifre karmaşıklığı kontrol edilir.
+#### [POST] /auth-service/role/create
+    Yeni bir kullanıcı rolü tanımlar.
+    Body (JSON): roleName (örn: admin, junior, editor)
 
-  Not: Başarılı kayıtta log sistemi bilgilendirilir.
+#### [POST] /auth-service/role/assign
+    Bir kullanıcıya belirli bir rol atar.
+    Body (JSON): roleName, email
+    Not: Kullanıcı veya rol bulunamazsa hata logu oluşturulur.
 
-### [POST] /auth-service/auth/login
-  Sisteme giriş yapar.
+#### [POST] /auth-service/auth/revoke
+    Mevcut oturumu sonlandırır (Logout).
+    Body (JSON): accessToken, refreshToken
+    Amacı: Tokenları geçersiz kılarak güvenliği sağlar.
 
-  Body (JSON): email, password
-
-  Yanıt: accessToken, refreshToken
-
-  Not: Docker ortamında bu işlem log servisine Event olarak bildirilir.
-
-### [POST] /auth-service/role/create
-  Yeni bir kullanıcı rolü tanımlar.
-
-  Body (JSON): roleName (örn: admin, junior, editor)
-
-### [POST] /auth-service/role/assign
-  Bir kullanıcıya belirli bir rol atar.
-
-  Body (JSON): roleName, email
-
-  Not: Kullanıcı veya rol bulunamazsa hata logu oluşturulur.
-
-### [POST] /auth-service/auth/revoke
-  Mevcut oturumu sonlandırır (Logout).
-
-  Body (JSON): accessToken, refreshToken
-
-  Amacı: Tokenları geçersiz kılarak güvenliği sağlar.
-
-2. Production Service (Ürün Yönetimi)
+# 2. Production Service (Ürün Yönetimi)
 ## Ürünlerin CRUD işlemleri ve caching mekanizmaları bu servis üzerindedir.
 
 ### [GET] /production-service/product
