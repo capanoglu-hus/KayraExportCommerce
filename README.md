@@ -1,6 +1,6 @@
 #  Kayra Export Commerce - Microservices Project
 
-Bu proje, modern yazılım mimarileri kullanılarak geliştirilmiş; **Auth** **Log** ve **Production** mikroservislerinden oluşan, Dockerize edilmiş bir e-ticaret altyapı simülasyonudur.
+Bu proje, modern yazılım mimarileri kullanılarak geliştirilmiş; **Auth** , **Log** ve **Production** mikroservislerinden oluşan, Dockerize edilmiş bir e-ticaret altyapı simülasyonudur.
 
 ---
 
@@ -13,6 +13,7 @@ Bu proje, modern yazılım mimarileri kullanılarak geliştirilmiş; **Auth** **
 * **Caching:** Redis (Ürün listeleme )
 * **Event:** Redis ile mikroservisler arası iletişim
 * **Containerization:** Docker & Docker Compose
+* **CI/CD:** GitHub Actions (CI Check)
 
 ---
 
@@ -36,5 +37,6 @@ cd KayraExportCommerce
     "http://localhost:5000" ile endpointlere istek atın
 
 
-#### Dokümantasyon  
-    Daha detaylı teknik analizler, veritabanı şemaları ve endpoint listeleri için lütfen doküman klasörünü inceleyin
+##### Dokümantasyon  
+    
+ Daha detaylı teknik analizler, veritabanı şemaları ve endpoint listeleri için lütfen doküman klasörünü inceleyin
