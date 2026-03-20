@@ -47,7 +47,7 @@
 ### [POST] /production-service/product
     Sisteme yeni ürün ekler.
 
-    Auth:JWT gereklidir.
+    Auth:JWT gereklidir. Roles = Admin
 
     Body (JSON): name, price, description, StockQuantity, Status
 
@@ -56,7 +56,7 @@
 ### [PUT] /production-service/product
     Mevcut ürün bilgilerini günceller.
 
-    Auth: JWT gereklidir.
+    Auth: JWT gereklidir. Roles = Admin
 
     Body (JSON): productId + Güncel veriler.
 
@@ -65,6 +65,6 @@
 ### [DELETE] /production-service/product?id={id}
     Sistemden ürün siler.
 
-    Auth: JWT gereklidir.
+    Auth: JWT gereklidir. Roles = Admin
 
     Cache: Ürün listesi cache'ten silinir.
