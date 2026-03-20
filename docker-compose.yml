@@ -43,7 +43,7 @@ services:
       - Jwt__SecurityKey=1d95192466435a1d771a3c56a4c0770f
     depends_on:
       sqlserver:
-        condition: service_healthy
+        condition: service_started
       redis:
         condition: service_started
 
@@ -58,7 +58,7 @@ services:
       - Jwt__SecurityKey=1d95192466435a1d771a3c56a4c0770f
     depends_on:
       sqlserver:
-        condition: service_healthy
+        condition: service_started
       redis:
         condition: service_started
 
@@ -84,7 +84,9 @@ services:
       - "5000:8080" 
     environment:
       - ASPNETCORE_URLS=http://+:8080
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ReverseProxy__Clusters__auth-cluster__Destinations__authService__Address=http://authapi:8080
+      - ReverseProxy__Clusters__production-cluster__Destinations__productionService__Address=http://productionservice:8080
       - Jwt__SecurityKey=1d95192466435a1d771a3c56a4c0770f
     depends_on:
       - authapi
